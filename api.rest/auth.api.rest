@@ -1,0 +1,32 @@
+@base = http://localhost:5010/api/
+@contentType = application/json
+@token = =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzc2MjMyMTQ4LCJleHAiOjE3NzYzMTg1NDh9.ainF0xeiqKUA4FW_uMERMjuHGQT_rsAeQPxbrXnbgBs
+@RefreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzc2MjMyMTQ4LCJleHAiOjE3NzY4MzY5NDh9.R-37J8eMUczukR0zr3yK_RuiQWVXsAuPLM8rXVD_0qE
+### Register
+POST {{base}}auth/register
+Content-Type: {{contentType}}
+
+{
+    "email": "dawdwadawdaw@gmal.com",
+    "password": "Cobdadawl1$",
+    "confPassword": "Cobdadawl1$",
+    "username": "Abdulhawari"
+}
+
+### Login
+POST {{base}}auth/login
+Content-Type: {{contentType}}
+
+{
+    "UsersOrEmail": "dawdwadawdaw@gmal.com",
+    "password": "Cobdadawl1$"
+}
+
+### Me
+GET {{base}}auth/me
+Content-Type: {{contentType}}
+Authorization: Bearer {{RefreshToken}}
+
+### Logout
+DELETE {{base}}auth/logout
+Authorization: Bearer {{token}}

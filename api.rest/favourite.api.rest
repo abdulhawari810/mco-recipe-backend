@@ -1,0 +1,30 @@
+@base = http://localhost:5010/api/
+@contentType = application/json
+@RefreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzc2NDc2MTI3LCJleHAiOjE3NzcwODA5Mjd9.6lbZ5RM6R0XdWMVZTdP9Ym97s9b_8D_kb2lSEKk6a_w
+@AccessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzc2NDc2MTI3LCJleHAiOjE3NzY1NjI1Mjd9.lr8ifDXcz9NnEvJ5nF2vcZh7n6dAYqrFJhrgus3ivrk
+
+### Login
+POST {{base}}auth/login
+Content-Type: {{contentType}}
+
+{
+    "UsersOrEmail": "dawdwadawdaw@gmal.com",
+    "password": "Cobdadawl1$"
+}
+
+### get favourite
+GET {{base}}favourite/
+Content-Type: {{contentType}}
+Authorization: Bearer {{AccessToken}}
+
+
+### create favourite
+POST {{base}}favourite/create/4
+Content-Type: {{contentType}}
+Authorization: Bearer {{AccessToken}}
+
+
+### create favourite
+DELETE {{base}}favourite/delete/3
+Content-Type: {{contentType}}
+Authorization: Bearer {{AccessToken}}
