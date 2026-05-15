@@ -2,9 +2,13 @@ import UsersModels from "./users.model.js";
 import RecipeModels from "./recipe.models.js";
 import FavouriteModels from "./favourite.model.js";
 import CategoriesModels from "./categories.model.js";
+import ProfileModels from "./profile.models.js";
 
 UsersModels.hasMany(RecipeModels, { foreignKey: "userId", as: "recipes" });
 RecipeModels.belongsTo(UsersModels, { foreignKey: "userId", as: "recipe" });
+
+UsersModels.hasOne(ProfileModels, { foreignKey: "userId", as: "profiles" });
+ProfileModels.belongsTo(UsersModels, { foreignKey: "userId", as: "profile" });
 
 UsersModels.hasMany(FavouriteModels, {
   foreignKey: "userId",
@@ -44,4 +48,10 @@ CategoriesModels.hasMany(RecipeModels, {
   constraints: true,
 });
 
-export { UsersModels, RecipeModels, FavouriteModels, CategoriesModels };
+export {
+  UsersModels,
+  RecipeModels,
+  FavouriteModels,
+  CategoriesModels,
+  ProfileModels,
+};

@@ -5,6 +5,7 @@ import {
   RecipeModels,
   FavouriteModels,
   CategoriesModels,
+  ProfileModels,
 } from "./relationship.model.js";
 
 export {
@@ -12,5 +13,6 @@ export {
   RefreshTokenModels,
   RecipeModels,
   FavouriteModels,
+  ProfileModels,
   CategoriesModels,
 };

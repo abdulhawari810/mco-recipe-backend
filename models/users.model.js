@@ -43,10 +43,6 @@ const UsersModels = db.define(
       type: DataTypes.STRING,
       defaultValue: "default.png",
     },
-    gender: {
-      type: DataTypes.ENUM("male", "female", "gay"),
-      defaultValue: "male",
-    },
     role: {
       type: DataTypes.ENUM("admin", "chief", "users"),
       defaultValue: "users",

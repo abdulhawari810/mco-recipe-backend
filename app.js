@@ -10,6 +10,7 @@ import {
   RecipeRoute,
   FavouriteRoute,
   CategoriesRoute,
+  ProfileRoutes,
 } from "./routes/initialize.route.js";
 
 dotenv.config();
@@ -57,6 +58,7 @@ app.use("/api/auth", AuthRoute);
 app.use("/api/recipes", RecipeRoute);
 app.use("/api/favourite", FavouriteRoute);
 app.use("/api/categories", CategoriesRoute);
+app.use("/api/profile", ProfileRoutes);
 
 app.listen(process.env.APP_PORT, () =>
   console.log("Server berjalan dengan baik dan tangguh..."),
