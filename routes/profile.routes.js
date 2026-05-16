@@ -1,5 +1,4 @@
 import express from "express";
-import {} from "../controllers/profil.controller.js";
 import { verifyToken } from "../middleware/auth.js";
 import {
   createProfile,
